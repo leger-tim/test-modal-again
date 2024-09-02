@@ -1,0 +1,30 @@
+{
+  "name": "test-modal-again",
+  "version": "1.0.5",
+  "description": "A simple React modal component",
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "files": [
+    "lib",
+    "es",
+    "src"
+  ],
+  "scripts": {
+    "build": "npm run build:cjs && npm run build:es",
+    "build:cjs": "babel src --out-dir lib --extensions \".js,.jsx\" --copy-files",
+    "build:es": "babel src --out-dir es --extensions \".js,.jsx\" --copy-files --no-babelrc --presets=@babel/preset-react",
+    "prepare": "npm run build"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0 || ^17.0.0 || ^18.0.0",
+    "react-dom": "^16.8.0 || ^17.0.0 || ^18.0.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.22.10",
+    "@babel/core": "^7.22.10",
+    "@babel/preset-env": "^7.22.10",
+    "@babel/preset-react": "^7.22.5",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
